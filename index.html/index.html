@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Luis Ebora — Portfolio</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <link href="style.css" rel="stylesheet" />
+
+  <style>
+    #education {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .education-timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      padding-left: 32px;
+    }
+
+    .education-timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #C9A84C, rgba(201, 168, 76, 0.1));
+    }
+
+    .edu-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-dot {
+      position: absolute;
+      left: -26px;
+      top: 28px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #C9A84C;
+      border: 2px solid #0d0d0d;
+      box-shadow: 0 0 12px rgba(201, 168, 76, 0.5);
+      z-index: 1;
+    }
+
+    .edu-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-radius: 16px;
+      padding: 32px 36px;
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    }
+
+    .edu-card:hover {
+      border-color: rgba(201, 168, 76, 0.45);
+      background: rgba(201, 168, 76, 0.04);
+      transform: translateX(4px);
+    }
+
+    .edu-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .edu-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(201, 168, 76, 0.12);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: #C9A84C;
+      flex-shrink: 0;
+    }
+
+    .edu-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .edu-year {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #C9A84C;
+      text-transform: uppercase;
+    }
+
+    .edu-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      border-radius: 20px;
+      background: rgba(201, 168, 76, 0.12);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: #C9A84C;
+      width: fit-content;
+    }
+
+    .edu-degree {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f0f0f0;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .edu-school {
+      font-size: 0.88rem;
+      color: rgba(240, 240, 240, 0.55);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .edu-school i {
+      color: #C9A84C;
+      opacity: 0.7;
+    }
+
+    .edu-desc {
+      font-size: 0.9rem;
+      color: rgba(240, 240, 240, 0.65);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .edu-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .edu-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(240, 240, 240, 0.6);
+    }
+
+    @media (max-width: 576px) {
+      .education-timeline {
+        padding-left: 24px;
+      }
+
+      .edu-card {
+        padding: 24px 20px;
+      }
+
+      .edu-dot {
+        left: -20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav id="mainNav" class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <a class="navbar-brand" href="#hero">
+        <img src="img/logo.svg" alt="Sebastian Luis Ebora Logo" />
+        <div class="brand-name">
+          Sebastian Luis Ebora
+          <small>Game Developer</small>
+        </div>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+
+        <div class="col-lg-6 hero-content">
+          <p class="hero-eyebrow">Available for Projects</p>
+
+          <h1 class="hero-headline">
+            Sebastian<br>
+            <span class="line-gold">Luis Ebora</span>
+          </h1>
+
+          <p class="hero-subline">
+            Designer &amp; Developer crafting purposeful digital experiences — where clean code meets considered
+            aesthetics.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#works" class="btn-primary-custom">
+              View My Work <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn-outline-custom">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+          <div class="hero-logo-large">
+            <div class="hero-logo-ring"></div>
+            <img src="img/logo.svg" alt="SLE Logo" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+
+        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start reveal">
+          <div class="profile-wrapper">
+            <img class="profile-photo" src="img/PIC.jpg" alt="Sebastian Luis Ebora">
+
+            <div class="profile-accent-box"></div>
+            <div class="profile-tag">Sebastian Luis Ebora</div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-8 reveal">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Crafting <span>Digital</span><br>Experiences</h2>
+          <div class="divider"></div>
+
+          <div class="about-text">
+            <p>
+              I'm Sebastian Luis Ebora — a passionate designer and developer based in the Philippines, dedicated to
+              building digital products that are both beautiful and functional. With a sharp eye for detail and a love
+              for clean architecture, I bridge the gap between design and technology.
+            </p>
+            <p>
+              My approach is rooted in understanding people first. Every project begins with listening — to the problem,
+              the users, and the purpose behind it. The result is work that not only looks great, but genuinely serves
+              its audience.
+            </p>
+            <p>
+              When I'm not coding or designing, I'm exploring new creative techniques and staying current with the
+              ever-evolving landscape of digital craft.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Projects Done</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="skills">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label">What I Do</span>
+        <h2 class="section-title">Core <span>Skills</span></h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+
+
+        <div class="col-md-4 reveal">
+          <div class="skill-card">
+            <span class="skill-number">01</span>
+            <span class="skill-icon">🎨</span>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing intuitive interfaces grounded in user research. From wireframes to high-fidelity prototypes, I
+              create experiences that feel effortless and look considered.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">User Research</span>
+              <span class="skill-tag">Design Systems</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 reveal">
+          <div class="skill-card">
+            <span class="skill-number">02</span>
+            <span class="skill-icon">💻</span>
+            <h3>Frontend Development</h3>
+            <p>
+              Building fast, responsive, and accessible web interfaces with modern technologies. Pixel-perfect execution
+              of designs with clean, maintainable code.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 reveal">
+          <div class="skill-card">
+            <span class="skill-number">03</span>
+            <span class="skill-icon">⚙️</span>
+            <h3>Brand Identity</h3>
+            <p>
+              Creating cohesive visual identities that communicate clearly and resonate authentically. Logos, typography
+              systems, and brand guidelines built to last.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Logo Design</span>
+              <span class="skill-tag">Brand Strategy</span>
+              <span class="skill-tag">Typography</span>
+              <span class="skill-tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="works">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Sample <span>Works</span></h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="row g-4">
+
+
+        <div class="col-md-4 reveal">
+          <div class="work-card">
+            <img class="work-thumb" src="img/connect.png" alt="Connect Four project preview">
+            <div class="work-body">
+              <h3>Connect Four</h3>
+              <p>A retro-inspired, fully interactive web implementation of the classic Connect Four game. Built
+                featuring a nostalgic 8-bit pixel aesthetic, responsive grid mechanics, and seamless logic handling for
+                local multiplayer or AI-driven gameplay.</p>
+              <a href="https://github.com/jhy-atnn/Connect-Four-Pygame.git" class="work-link">
+                View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 reveal">
+          <div class="work-card">
+            <img class="work-thumb" src="img/apexgear.jpg" alt="Apex Gear project preview">
+            <div class="work-body">
+              <h3>Apex Gear</h3>
+              <p>A high-performance e-commerce platform custom-tailored for gaming peripherals and tech enthusiasts.
+                Engineered with dynamic product showcase banners, a streamlined shopping cart workflow, and a robust
+                brand-filtering system.</p>
+              <a href="https://github.com/jhy-atnn/ApexGear-E-commerce.git" class="work-link">
+                View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="work-card">
+            <img class="work-thumb" src="img/lakbaylokal.png" alt="Lakbay Lokal project preview">
+            <div class="work-body">
+              <h3>Lakbay Lokal</h3>
+              <p>An immersive travel exploration and booking web platform dedicated to highlighting regional tourism.
+                Built with an elegant, media-rich user interface, interactive destination discovery cards, and localized
+                booking systems designed to drive engagement.</p>
+              <a href="https://github.com/lakbaylokal/LakbayLokal.git" class="work-link">
+                View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="education">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title">Education &amp; <span>Credentials</span></h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="education-timeline">
+
+
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div class="edu-meta">
+                <span class="edu-year">2020 — 2024</span>
+                <span class="edu-badge">Bachelor's Degree</span>
+              </div>
+            </div>
+            <h3 class="edu-degree">Bachelor of Science in Information Technology</h3>
+            <p class="edu-school"><i class="bi bi-building"></i> University of the Philippines Los Baños</p>
+            <p class="edu-desc">
+              Focused on software development, human-computer interaction, and systems design. Graduated with honors and
+              completed a capstone project on adaptive UI frameworks for mobile-first applications.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">Software Engineering</span>
+              <span class="edu-tag">HCI</span>
+              <span class="edu-tag">Database Systems</span>
+              <span class="edu-tag">Web Technologies</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-icon"><i class="bi bi-patch-check-fill"></i></div>
+              <div class="edu-meta">
+                <span class="edu-year">2023</span>
+                <span class="edu-badge">Certification</span>
+              </div>
+            </div>
+            <h3 class="edu-degree">Google UX Design Professional Certificate</h3>
+            <p class="edu-school"><i class="bi bi-globe"></i> Google via Coursera</p>
+            <p class="edu-desc">
+              Completed a seven-course program covering the end-to-end UX design process — from user research and
+              personas to wireframing, prototyping, and usability testing.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">UX Research</span>
+              <span class="edu-tag">Wireframing</span>
+              <span class="edu-tag">Usability Testing</span>
+              <span class="edu-tag">Figma</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <div class="edu-icon"><i class="bi bi-journal-code"></i></div>
+              <div class="edu-meta">
+                <span class="edu-year">2018 — 2020</span>
+                <span class="edu-badge">Senior High School</span>
+              </div>
+            </div>
+            <h3 class="edu-degree">STEM Strand — Science, Technology, Engineering &amp; Mathematics</h3>
+            <p class="edu-school"><i class="bi bi-building"></i> Majayjay National High School</p>
+            <p class="edu-desc">
+              Completed the STEM strand with distinction, developing a strong analytical foundation in mathematics,
+              physics, and introductory programming that laid the groundwork for a career in technology.
+            </p>
+            <div class="edu-tags">
+              <span class="edu-tag">Mathematics</span>
+              <span class="edu-tag">Physics</span>
+              <span class="edu-tag">Programming Fundamentals</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-5">
+
+
+          <div class="col-lg-4 reveal">
+            <div class="footer-brand">
+              <img src="img/logo.svg" alt="SLE Logo" />
+              <p>Open for freelance collaborations and full-time opportunities. Let's build something meaningful
+                together.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 reveal">
+            <p class="footer-heading">Get in Touch</p>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+              <div class="contact-info">
+                <strong>Email</strong>
+                <span>sebastianluisebora@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+              <div class="contact-info">
+                <strong>Phone</strong>
+                <span>+63 963 442 5756</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="contact-info">
+                <strong>Location</strong>
+                <span>Calamba, Laguna, Philippines</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 reveal">
+            <p class="footer-heading">Follow &amp; Connect</p>
+
+            <div class="social-links mb-4">
+              <a href="https://github.com/" class="social-link" aria-label="GitHub" target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook" target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="social-link" aria-label="Instagram" target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+
+            <p style="font-size:0.82rem; color: var(--muted); font-weight: 300;">
+              Currently available for new projects. Response time is usually within 24 hours.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer-bottom">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+        <span>&copy; 2025 Sebastian Luis Ebora. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('gold-text');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('gold-text');
+      });
+    });
+
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 40
+        ? '0 4px 24px rgba(0,0,0,0.6)'
+        : 'none';
+    });
+  </script>
+
+</body>
+
+</html>
