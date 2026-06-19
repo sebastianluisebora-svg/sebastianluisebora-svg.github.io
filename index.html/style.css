@@ -6,6 +6,17 @@
 
 /* ── CSS Variables ── */
 :root {
+  --bs-body-bg: #0A0A0A;
+  --bs-body-color: #CCCCCC;
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+  --bs-heading-color: #FFFFFF;
+  --bs-border-color: #2A2A2A;
+  --bs-link-color: #F0ED37;
+  --bs-link-hover-color: #D28A31;
+  --bs-primary: #F0ED37;
+  --bs-primary-rgb: 240, 237, 55;
+  --bs-border-radius: 4px;
+
   --gold-bright: #F0ED37;
   --gold-mid:    #BDBB2B;
   --amber:       #D28A31;
@@ -228,48 +239,49 @@ section { padding: 6rem 0; }
 }
 
 .btn-primary-custom {
+  --bs-btn-bg: var(--gold-bright);
+  --bs-btn-border-color: var(--gold-bright);
+  --bs-btn-color: var(--black);
+  --bs-btn-hover-bg: var(--amber);
+  --bs-btn-hover-border-color: var(--amber);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-active-bg: var(--amber);
+  --bs-btn-active-border-color: var(--amber);
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--gold-bright);
-  color: var(--black);
   font-family: var(--ff-mono);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
   padding: 0.9rem 2rem;
-  border: none;
-  cursor: pointer;
   transition: all var(--transition);
 }
 
 .btn-primary-custom:hover {
-  background: var(--amber);
-  color: var(--white);
   transform: translateY(-2px);
 }
 
 .btn-outline-custom {
+  --bs-btn-color: var(--white);
+  --bs-btn-border-color: var(--dark-border);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--gold-bright);
+  --bs-btn-hover-color: var(--gold-bright);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--gold-bright);
+  --bs-btn-active-color: var(--gold-bright);
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: transparent;
-  color: var(--white);
   font-family: var(--ff-mono);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
   padding: 0.9rem 2rem;
-  border: 1px solid var(--dark-border);
-  cursor: pointer;
   transition: all var(--transition);
-}
-
-.btn-outline-custom:hover {
-  border-color: var(--gold-bright);
-  color: var(--gold-bright);
 }
 
 .hero-logo-large {
@@ -424,6 +436,8 @@ section { padding: 6rem 0; }
 #skills { background: var(--black); }
 
 .skill-card {
+  --bs-card-bg: var(--dark-card);
+  --bs-card-border-color: var(--dark-border);
   background: var(--dark-card);
   border: 1px solid var(--dark-border);
   padding: 2.5rem 2rem;
@@ -482,12 +496,14 @@ section { padding: 6rem 0; }
 }
 
 .skill-tag {
+  --bs-badge-color: var(--muted);
   font-family: var(--ff-mono);
   font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.3rem 0.7rem;
   border: 1px solid var(--dark-border);
+  background: transparent;
   color: var(--muted);
   transition: all var(--transition);
 }
@@ -501,6 +517,8 @@ section { padding: 6rem 0; }
 #works { background: var(--dark); }
 
 .work-card {
+  --bs-card-bg: var(--dark-card);
+  --bs-card-border-color: var(--dark-border);
   background: var(--dark-card);
   border: 1px solid var(--dark-border);
   overflow: hidden;
@@ -583,6 +601,11 @@ section { padding: 6rem 0; }
 }
 
 .work-link {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-color: var(--gold-bright);
+  --bs-btn-hover-color: var(--gold-bright);
+  --bs-btn-border-width: 0;
   font-family: var(--ff-mono);
   font-size: 0.7rem;
   letter-spacing: 0.15em;
@@ -663,6 +686,9 @@ section { padding: 6rem 0; }
 .social-links { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
 
 .social-link {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-width: 0;
   width: 38px; height: 38px;
   border: 1px solid var(--dark-border);
   display: flex;

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S.L.R.E</title>
 
-  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+ <link rel="icon" type="image/png" href="index.html\img\logo.png.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
@@ -185,7 +185,7 @@
 <body>
 
 
-  <nav id="mainNav" class="navbar navbar-expand-lg">
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
 
       <a class="navbar-brand" href="#hero">
@@ -238,10 +238,10 @@
           </p>
 
           <div class="d-flex flex-wrap gap-3">
-            <a href="#works" class="btn-primary-custom">
+            <a href="#works" class="btn btn-primary btn-primary-custom">
               View My Work <i class="bi bi-arrow-right"></i>
             </a>
-            <a href="#contact" class="btn-outline-custom">
+            <a href="#contact" class="btn btn-outline-light btn-outline-custom">
               Get in Touch
             </a>
           </div>
@@ -328,11 +328,11 @@
         <div class="divider mx-auto"></div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 d-flex justify-content-around">
 
 
         <div class="col-md-4 reveal">
-          <div class="skill-card">
+          <div class="card skill-card">
             <span class="skill-number">01</span>
             <span class="skill-icon">🎨</span>
             <h3>UI/UX Design</h3>
@@ -341,17 +341,17 @@
               create experiences that feel effortless and look considered.
             </p>
             <div class="skill-tags">
-              <span class="skill-tag">Figma</span>
-              <span class="skill-tag">Prototyping</span>
-              <span class="skill-tag">User Research</span>
-              <span class="skill-tag">Design Systems</span>
+              <span class="badge rounded-pill skill-tag">Figma</span>
+              <span class="badge rounded-pill skill-tag">Prototyping</span>
+              <span class="badge rounded-pill skill-tag">User Research</span>
+              <span class="badge rounded-pill skill-tag">Design Systems</span>
             </div>
           </div>
         </div>
 
 
         <div class="col-md-4 reveal">
-          <div class="skill-card">
+          <div class="card skill-card">
             <span class="skill-number">02</span>
             <span class="skill-icon">💻</span>
             <h3>Frontend Development</h3>
@@ -360,17 +360,17 @@
               of designs with clean, maintainable code.
             </p>
             <div class="skill-tags">
-              <span class="skill-tag">HTML/CSS</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Bootstrap</span>
+              <span class="badge rounded-pill skill-tag">HTML/CSS</span>
+              <span class="badge rounded-pill skill-tag">JavaScript</span>
+              <span class="badge rounded-pill skill-tag">React</span>
+              <span class="badge rounded-pill skill-tag">Bootstrap</span>
             </div>
           </div>
         </div>
 
 
         <div class="col-md-4 reveal">
-          <div class="skill-card">
+          <div class="card skill-card">
             <span class="skill-number">03</span>
             <span class="skill-icon">⚙️</span>
             <h3>Brand Identity</h3>
@@ -379,10 +379,10 @@
               systems, and brand guidelines built to last.
             </p>
             <div class="skill-tags">
-              <span class="skill-tag">Logo Design</span>
-              <span class="skill-tag">Brand Strategy</span>
-              <span class="skill-tag">Typography</span>
-              <span class="skill-tag">Illustrator</span>
+              <span class="badge rounded-pill skill-tag">Logo Design</span>
+              <span class="badge rounded-pill skill-tag">Brand Strategy</span>
+              <span class="badge rounded-pill skill-tag">Typography</span>
+              <span class="badge rounded-pill skill-tag">Illustrator</span>
             </div>
           </div>
         </div>
@@ -400,18 +400,18 @@
         <div class="divider mx-auto"></div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 d-flex justify-content-around">
 
 
         <div class="col-md-4 reveal">
-          <div class="work-card">
-            <img class="work-thumb" src="img/connect.png" alt="Connect Four project preview">
-            <div class="work-body">
+          <div class="card work-card">
+            <img class="card-img-top work-thumb" src="img/connect.png" alt="Connect Four project preview">
+            <div class="card-body work-body">
               <h3>Connect Four</h3>
               <p>A retro-inspired, fully interactive web implementation of the classic Connect Four game. Built
                 featuring a nostalgic 8-bit pixel aesthetic, responsive grid mechanics, and seamless logic handling for
                 local multiplayer or AI-driven gameplay.</p>
-              <a href="https://github.com/jhy-atnn/Connect-Four-Pygame.git" class="work-link">
+              <a href="https://github.com/jhy-atnn/Connect-Four-Pygame.git" class="btn btn-link work-link">
                 View Project <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -420,14 +420,14 @@
 
 
         <div class="col-md-4 reveal">
-          <div class="work-card">
-            <img class="work-thumb" src="img/apexgear.jpg" alt="Apex Gear project preview">
-            <div class="work-body">
+          <div class="card work-card">
+            <img class="card-img-top work-thumb" src="img/apexgear.jpg" alt="Apex Gear project preview">
+            <div class="card-body work-body">
               <h3>Apex Gear</h3>
               <p>A high-performance e-commerce platform custom-tailored for gaming peripherals and tech enthusiasts.
                 Engineered with dynamic product showcase banners, a streamlined shopping cart workflow, and a robust
                 brand-filtering system.</p>
-              <a href="https://github.com/jhy-atnn/ApexGear-E-commerce.git" class="work-link">
+              <a href="https://github.com/jhy-atnn/ApexGear-E-commerce.git" class="btn btn-link work-link">
                 View Project <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -435,14 +435,14 @@
         </div>
 
         <div class="col-md-4 reveal">
-          <div class="work-card">
-            <img class="work-thumb" src="img/lakbaylokal.png" alt="Lakbay Lokal project preview">
-            <div class="work-body">
+          <div class="card work-card">
+            <img class="card-img-top work-thumb" src="img/lakbaylokal.png" alt="Lakbay Lokal project preview">
+            <div class="card-body work-body">
               <h3>Lakbay Lokal</h3>
               <p>An immersive travel exploration and booking web platform dedicated to highlighting regional tourism.
                 Built with an elegant, media-rich user interface, interactive destination discovery cards, and localized
                 booking systems designed to drive engagement.</p>
-              <a href="https://github.com/lakbaylokal/LakbayLokal.git" class="work-link">
+              <a href="https://github.com/lakbaylokal/LakbayLokal.git" class="btn btn-link work-link">
                 View Project <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -468,12 +468,12 @@
 
         <div class="edu-item reveal">
           <div class="edu-dot"></div>
-          <div class="edu-card">
+          <div class="card edu-card">
             <div class="edu-card-header">
               <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
               <div class="edu-meta">
                 <span class="edu-year">2020 — 2024</span>
-                <span class="edu-badge">Bachelor's Degree</span>
+                <span class="badge rounded-pill edu-badge">Bachelor's Degree</span>
               </div>
             </div>
             <h3 class="edu-degree">Bachelor of Science in Information Technology</h3>
@@ -483,10 +483,10 @@
               completed a capstone project on adaptive UI frameworks for mobile-first applications.
             </p>
             <div class="edu-tags">
-              <span class="edu-tag">Software Engineering</span>
-              <span class="edu-tag">HCI</span>
-              <span class="edu-tag">Database Systems</span>
-              <span class="edu-tag">Web Technologies</span>
+              <span class="badge rounded-pill edu-tag">Software Engineering</span>
+              <span class="badge rounded-pill edu-tag">HCI</span>
+              <span class="badge rounded-pill edu-tag">Database Systems</span>
+              <span class="badge rounded-pill edu-tag">Web Technologies</span>
             </div>
           </div>
         </div>
@@ -494,12 +494,12 @@
 
         <div class="edu-item reveal">
           <div class="edu-dot"></div>
-          <div class="edu-card">
+          <div class="card edu-card">
             <div class="edu-card-header">
               <div class="edu-icon"><i class="bi bi-patch-check-fill"></i></div>
               <div class="edu-meta">
                 <span class="edu-year">2023</span>
-                <span class="edu-badge">Certification</span>
+                <span class="badge rounded-pill edu-badge">Certification</span>
               </div>
             </div>
             <h3 class="edu-degree">Google UX Design Professional Certificate</h3>
@@ -509,10 +509,10 @@
               personas to wireframing, prototyping, and usability testing.
             </p>
             <div class="edu-tags">
-              <span class="edu-tag">UX Research</span>
-              <span class="edu-tag">Wireframing</span>
-              <span class="edu-tag">Usability Testing</span>
-              <span class="edu-tag">Figma</span>
+              <span class="badge rounded-pill edu-tag">UX Research</span>
+              <span class="badge rounded-pill edu-tag">Wireframing</span>
+              <span class="badge rounded-pill edu-tag">Usability Testing</span>
+              <span class="badge rounded-pill edu-tag">Figma</span>
             </div>
           </div>
         </div>
@@ -520,12 +520,12 @@
 
         <div class="edu-item reveal">
           <div class="edu-dot"></div>
-          <div class="edu-card">
+          <div class="card edu-card">
             <div class="edu-card-header">
               <div class="edu-icon"><i class="bi bi-journal-code"></i></div>
               <div class="edu-meta">
                 <span class="edu-year">2018 — 2020</span>
-                <span class="edu-badge">Senior High School</span>
+                <span class="badge rounded-pill edu-badge">Senior High School</span>
               </div>
             </div>
             <h3 class="edu-degree">STEM Strand — Science, Technology, Engineering &amp; Mathematics</h3>
@@ -535,9 +535,9 @@
               physics, and introductory programming that laid the groundwork for a career in technology.
             </p>
             <div class="edu-tags">
-              <span class="edu-tag">Mathematics</span>
-              <span class="edu-tag">Physics</span>
-              <span class="edu-tag">Programming Fundamentals</span>
+              <span class="badge rounded-pill edu-tag">Mathematics</span>
+              <span class="badge rounded-pill edu-tag">Physics</span>
+              <span class="badge rounded-pill edu-tag">Programming Fundamentals</span>
             </div>
           </div>
         </div>
@@ -596,15 +596,15 @@
             <p class="footer-heading">Follow &amp; Connect</p>
 
             <div class="social-links mb-4">
-              <a href="https://github.com/" class="social-link" aria-label="GitHub" target="_blank"
+              <a href="https://github.com/" class="btn social-link" aria-label="GitHub" target="_blank"
                 rel="noopener noreferrer">
                 <i class="bi bi-github"></i>
               </a>
-              <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook" target="_blank"
+              <a href="https://www.facebook.com/" class="btn social-link" aria-label="Facebook" target="_blank"
                 rel="noopener noreferrer">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/" class="social-link" aria-label="Instagram" target="_blank"
+              <a href="https://www.instagram.com/" class="btn social-link" aria-label="Instagram" target="_blank"
                 rel="noopener noreferrer">
                 <i class="bi bi-instagram"></i>
               </a>
@@ -629,7 +629,7 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     const revealEls = document.querySelectorAll('.reveal');
