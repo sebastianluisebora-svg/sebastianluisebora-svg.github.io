@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
-/* ── CSS Variables ── */
 :root {
   --bs-body-bg: #0A0A0A;
   --bs-body-color: #CCCCCC;
@@ -32,7 +31,6 @@
   --radius:     4px;
 }
 
-/* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -62,7 +60,6 @@ img {
   display: block;
 }
 
-/* ── Utility ── */
 .gold-text  { color: var(--gold-bright); }
 .amber-text { color: var(--amber); }
 
@@ -95,7 +92,6 @@ img {
 
 section { padding: clamp(4rem, 8vw, 6rem) 0; }
 
-/* ── Navbar ── */
 #mainNav {
   background-color: rgba(10, 10, 10, 0.96);
   backdrop-filter: blur(12px);
@@ -176,7 +172,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(240,237,55,0.9)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* ── Hero ── */
 #hero {
   min-height: calc(100vh - 74px);
   display: flex;
@@ -333,7 +328,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   to   { transform: rotate(360deg); }
 }
 
-/* ── About ── */
 #about { background: var(--dark); }
 
 
@@ -419,7 +413,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   margin-top: 0.25rem;
 }
 
-/* ── Skills ── */
 #skills { background: var(--black); }
 
 .skill-card {
@@ -500,7 +493,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   color: var(--gold-bright);
 }
 
-/* ── Works ── */
 #works { background: var(--dark); }
 
 .work-card {
@@ -606,7 +598,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 
 .work-link:hover { gap: 0.85rem; color: var(--gold-bright); }
 
-/* ── Footer / Contact ── */
 #contact {
   background: var(--black);
   border-top: 1px solid var(--dark-border);
@@ -705,7 +696,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
 .footer-bottom .made-with { color: var(--muted); }
 .footer-bottom .made-with span { color: var(--gold-bright); }
 
-/* ── Scroll Reveal Animation ── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -717,7 +707,6 @@ section { padding: clamp(4rem, 8vw, 6rem) 0; }
   transform: translateY(0);
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   #mainNav {
     padding: 0.75rem 0;
